@@ -1,0 +1,33 @@
+<header>
+    <div id="flex-header">
+        
+             <div id="site-name">
+                 <a href="/" style="text-decoration: none;">
+                     <h4>PlacmentCell</h4>
+                 </a>
+             </div>
+         
+        <div id="links">
+         <%if(locals.user){%>
+           
+             <div class="text">
+                 <a href="/employees/profile/<%=locals.user._id%>"><%=locals.user.name%></a>
+             </div>    
+             <div class="text">
+                 <a href="/employees/sign-out">Sign Out</a>
+             </div>
+             
+         <%}
+         else{%>
+             
+             <div class="text">
+                 <a href="/employees/sign-in">Sign In</a>
+             </div>
+             <div class="text">
+                 <a href="/employees/sign-up">Sign Up</a>
+             </div>
+     
+         <%}%>
+        </div>
+    </div>
+ </header>
