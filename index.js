@@ -54,7 +54,7 @@ app.use(session({
     },
     store :  MongoStore.create ({
         
-                 mongoUrl:`mongodb://localhost/${env.db}`,
+                 mongoUrl:process.env.MONGOLAB_URI,
            autoRemove:'disabled'
         
         },
